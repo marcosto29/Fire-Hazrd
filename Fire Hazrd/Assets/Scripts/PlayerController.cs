@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
 
     private bool IsGrounded()
     {
-        BoxCollider2D b = this.GetComponent<BoxCollider2D>();
+        PolygonCollider2D b = this.GetComponent<PolygonCollider2D>();
         return Physics2D.BoxCast(b.bounds.center, b.bounds.size, 0f, Vector2.down, .1f, layer);
     }
 }
