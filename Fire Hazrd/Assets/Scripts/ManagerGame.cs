@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class ManagerGame : MonoBehaviour
 {
-    public float launchForce;
-
-    public void OnCollisionEnter2D(Collision2D collision)
+    // Start is called before the first frame update
+    void Start()
     {
-        collision.rigidbody.velocity = Vector2.up * launchForce;
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }
