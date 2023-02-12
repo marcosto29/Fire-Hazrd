@@ -5,28 +5,26 @@ using UnityEngine;
 public class ManagerGame : MonoBehaviour
 {
     string ActiveLayer;
-    int ActiveLayerId;
     public Player MainCharacter;
     public GameObject[] Layers;
     // Start is called before the first frame update
     void Start()
     {
         ActiveLayer = MainCharacter.gameObject.GetComponent<SpriteRenderer>().sortingLayerName;
-        ActiveLayerId = MainCharacter.gameObject.GetComponent<SpriteRenderer>().sortingLayerID;
-        ActiveLayers();
+        ActiveLayers(ActiveLayer);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    public void ActiveLayers()
+    public void ActiveLayers(string Layer)
     {
         foreach(GameObject l in Layers)
         {
-            if(l.gameObject.GetComponent<SpriteRenderer>().sortingLayerName == ActiveLayer)
+            if(l.gameObject.GetComponent<SpriteRenderer>().sortingLayerName == Layer)
             {
                 foreach(Transform child in l.transform)
                 {

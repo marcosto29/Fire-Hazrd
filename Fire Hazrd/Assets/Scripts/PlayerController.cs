@@ -9,12 +9,17 @@ public class PlayerController : MonoBehaviour
     public float direction = 0f;
     private Rigidbody2D player;
 
+    string[] Layers = { "Back", "Medium", "Front" };
+    string CurrentLayer;
+
     [SerializeField] private LayerMask layer;
 
+    public ManagerGame manager;
 
     // Start is called before the first frame update
     void Start()
     {
+        CurrentLayer = this.gameObject.GetComponent<SpriteRenderer>().sortingLayerName;
         player = GetComponent<Rigidbody2D>();
     }
 
@@ -38,6 +43,34 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             player.velocity = new Vector2(player.velocity.x, jumpSpeed);
+        }
+
+        direction = Input.GetAxis("Vertical");
+
+        if (Input.GetButtonDown("Vertical"))
+        {
+            if (direction < 0f)
+            {
+                int index = System.Array.IndexOf(Layers, CurrentLayer);
+                if(index != 2)
+                {
+                    CurrentLayer = Layers[index + 1];
+                }
+                print(CurrentLayer);
+            }
+            else if (direction > 0f)
+            {
+                int index = System.Array.IndexOf(Layers, CurrentLayer);
+                if (index != 0)
+                {
+                    CurrentLayer = Layers[index - 1];
+                }
+                print(CurrentLayer);
+            }
+
+            this.gameObject.GetComponent<SpriteRenderer>().sortingLayerName = CurrentLayer;
+
+            manager.ActiveLayers(CurrentLayer);
         }
     }
 
