@@ -5,9 +5,17 @@ using UnityEngine;
 public class Trampoline : MonoBehaviour
 {
     public float launchForce;
-
-    public void OnCollisionEnter2D(Collision2D collision)
+    public GameObject player;
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        collision.rigidbody.velocity = Vector2.up * launchForce;
+        collision.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.up * launchForce;
     }
+
+    private void Update()
+    {
+        Vector2 vector = player.transform.position - this.transform.position;
+        Debug.DrawRay(player.transform.position, vector * launchForce, Color.red);
+        Debug.DrawRay(player.transform.position, player.GetComponent<Rigidbody2D>().velocity, Color.green);
+    }
+    
 }
