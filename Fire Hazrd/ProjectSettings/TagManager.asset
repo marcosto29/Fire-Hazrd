@@ -41,10 +41,13 @@ TagManager:
   - name: Background
     uniqueID: 3094326839
     locked: 0
-  - name: New Layer 2
+  - name: Back
+    uniqueID: 2752333733
+    locked: 0
+  - name: Medium
     uniqueID: 712950243
     locked: 0
-  - name: New Layer 3
+  - name: Front
     uniqueID: 2266674975
     locked: 0
   - name: Default
