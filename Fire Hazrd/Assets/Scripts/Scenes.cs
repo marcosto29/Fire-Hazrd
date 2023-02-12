@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class Scenes : MonoBehaviour
 {
     public Animator transition;
-    public float transitionTime = 1f;
+    public float transitionTime;
+    public AudioManager audio;
 
     public void playScene(string name)
     {
@@ -16,6 +17,7 @@ public class Scenes : MonoBehaviour
     }
     IEnumerator LoadScene(string name)
     {
+        audio.Play("Paper");
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(transitionTime);
         SceneManager.LoadScene(name);

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4346464915774287619}
-  - component: {fileID: 5914158307643109088}
+  - component: {fileID: 8207529561156405180}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5914158307643109088
+--- !u!114 &8207529561156405180
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,18 +41,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4346464915774287617}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 755910bca266e8e47b61c52f96630d49, type: 3}
+  m_Script: {fileID: 11500000, guid: 08a8f331164b2ff4d9f1c65bb097f40c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: Theme
-    clip: {fileID: 8300000, guid: 19b40bee6bbbd8544a4e247f69f6db40, type: 3}
-    volume: 0.2
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: Click
-    clip: {fileID: 8300000, guid: 78f75583f24461746b8e7ffe85088b8e, type: 3}
+  - name: Paper
+    clip: {fileID: 8300000, guid: adc329041691b904e815a77ee95132ab, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
