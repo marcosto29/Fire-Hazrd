@@ -10,6 +10,10 @@ public class Player : MonoBehaviour
     public Sprite[] Hearts;
 
     public Image HealthUI;
+
+    public Rigidbody2D rg2d;
+
+    public Vector2 bounciness;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,12 +50,11 @@ public class Player : MonoBehaviour
                 HealthUI.sprite = Hearts[2];
                 break;
 
-
         }
-
-
-
     }
 
-    
+    public void Bouncy(Vector2 HitPoint)
+    {
+        rg2d.velocity = new Vector2(-bounciness.x * HitPoint.x, bounciness.y);
+    }
 }
