@@ -7,8 +7,8 @@ public class Fire : MonoBehaviour
     float elapsed = 0f;
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        collision.gameObject.GetComponent<Player>().Damage();
-        print(collision.gameObject.GetComponent<Player>().Health);
+        collision.gameObject.GetComponent<Character>().Damage();
+        print(collision.gameObject.GetComponent<Character>().Health);
     }
     public void OnTriggerStay2D(Collider2D collision)
     {
@@ -16,8 +16,8 @@ public class Fire : MonoBehaviour
         if(elapsed >= 2f)
         {
             elapsed %= 2f;
-            collision.gameObject.GetComponent<Player>().Damage();
-            print(collision.gameObject.GetComponent<Player>().Health);
+            collision.gameObject.GetComponent<Character>().Damage();
+            print(collision.gameObject.GetComponent<Character>().Health);
         }       
     }
 }

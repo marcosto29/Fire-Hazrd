@@ -3,21 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Player : MonoBehaviour
+public class Player : Character
 {
-    public int Health = 6;
-
     public Sprite[] Hearts;
-
     public Image HealthUI;
-
-    public Rigidbody2D rg2d;
-
-    public Vector2 bounciness;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Health = 6;
     }
 
     // Update is called once per frame
@@ -26,7 +19,7 @@ public class Player : MonoBehaviour
 
     }
 
-    public void Damage()
+    public override void Damage()
     {
         Health -= 1;
         switch (Health)
@@ -51,10 +44,5 @@ public class Player : MonoBehaviour
                 break;
 
         }
-    }
-
-    public void Bouncy(Vector2 HitPoint)
-    {
-        rg2d.velocity = new Vector2(-bounciness.x * HitPoint.x, bounciness.y);
     }
 }

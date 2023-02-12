@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemies : MonoBehaviour
+public class Enemies : Character
 {
-    [SerializeField] Vector2 bounciness;
-    public Rigidbody2D rg2d;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,8 +27,8 @@ public class Enemies : MonoBehaviour
 
     }
 
-    public void Bouncy(Vector2 HitPoint)
+    public override void Damage()
     {
-        rg2d.velocity = new Vector2(-bounciness.x * HitPoint.x, bounciness.y);
+        Health -= 1;
     }
 }
