@@ -10,12 +10,11 @@ public class Trampoline : MonoBehaviour
     {
         collision.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.up * launchForce;
     }
-
     private void Update()
     {
-        Vector2 vector = player.transform.position - this.transform.position;
-        Debug.DrawRay(player.transform.position, vector * launchForce, Color.red);
-        Debug.DrawRay(player.transform.position, player.GetComponent<Rigidbody2D>().velocity, Color.green);
+        //Vector2 vector = player.transform.position - this.transform.position;
+        //Debug.DrawRay(player.transform.position, vector * launchForce, Color.red);
+        //Debug.DrawRay(player.transform.position, player.GetComponent<Rigidbody2D>().velocity, Color.green);
     }
     
 }

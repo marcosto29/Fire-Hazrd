@@ -40,10 +40,6 @@ public class PlayerController : MonoBehaviour
         {
             player.velocity = new Vector2(0, player.velocity.y);//para que no haya deslizamiento
         }
-        if (Input.GetButtonDown("Jump") && IsGrounded())
-        {
-            player.velocity = new Vector2(player.velocity.x, jumpSpeed);
-        }
 
         direction = Input.GetAxis("Vertical");
 
@@ -72,11 +68,16 @@ public class PlayerController : MonoBehaviour
 
             manager.ActiveLayers(CurrentLayer);
         }
+
+        if (Input.GetButtonDown("Jump") && IsGrounded())
+        {
+            player.velocity = new Vector2(player.velocity.x, jumpSpeed);
+        }
     }
 
     private bool IsGrounded()
     {
-        PolygonCollider2D b = this.GetComponent<PolygonCollider2D>();
+        Collider2D b = this.GetComponent<Collider2D>();
         return Physics2D.BoxCast(b.bounds.center, b.bounds.size, 0f, Vector2.down, .1f, layer);
     }
 }
