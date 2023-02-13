@@ -7,6 +7,7 @@ public abstract class Character : MonoBehaviour
     public Vector2 bounciness;
     public int Health;
     public Rigidbody2D rg2d;
+    public AudioManager audio;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,5 +23,10 @@ public abstract class Character : MonoBehaviour
     public void Bouncy(Vector2 HitPoint)
     {
         rg2d.velocity = new Vector2(-bounciness.x * HitPoint.x, bounciness.y);
+    }
+
+    public void sound(string name)
+    {
+        audio.Play(name);
     }
 }
