@@ -11,7 +11,6 @@ public class Enemies : Character
         {
             collision.gameObject.GetComponent<Player>().Damage();
             collision.gameObject.GetComponent<Player>().Bouncy(collision.GetContact(0).normal);
-            Bouncy(collision.GetContact(0).normal);
         }
 
     }

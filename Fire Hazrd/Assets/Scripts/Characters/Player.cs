@@ -38,4 +38,18 @@ public class Player : Character
                 break;
         }
     }
+
+    public void Bouncy(Vector2 HitPoint)
+    {
+        StartCoroutine(Stop());
+        rg2d.velocity = new Vector2(-bounciness.x * HitPoint.x, bounciness.y);
+    }
+
+    IEnumerator Stop()
+    {
+        this.gameObject.GetComponent<PlayerController>().move = false;
+        yield return new WaitForSeconds(1);
+        this.gameObject.GetComponent<PlayerController>().move = true;
+    }
+
 }

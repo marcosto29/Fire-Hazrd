@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float jumpSpeed = 8f;
     public float direction = 0f;
     private Rigidbody2D player;
+    public bool move;
 
     string[] Layers = { "Back", "Medium", "Front" };
     string CurrentLayer;
@@ -21,6 +22,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        move = true;
         CurrentLayer = this.gameObject.GetComponent<SpriteRenderer>().sortingLayerName;
         player = GetComponent<Rigidbody2D>();
     }
@@ -28,55 +30,58 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        direction = Input.GetAxis("Horizontal");
+        if (move)
+        {
+            direction = Input.GetAxis("Horizontal");
 
-        if (direction > 0f)
-        {
-            player.velocity = new Vector2(direction * speed, player.velocity.y);//se aplica una velocidad a la dirección que vaya el jugador
-            this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
-        }
-        else if (direction < 0f)
-        {
-            player.velocity = new Vector2(direction * speed, player.velocity.y);
-            this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
-        }
-        else
-        {
-            player.velocity = new Vector2(0, player.velocity.y);//para que no haya deslizamiento
-        }
-
-        direction = Input.GetAxis("Vertical");
-
-        if (Input.GetButtonDown("Vertical"))
-        {
-            if (direction < 0f)
+            if (direction > 0f)
             {
-                int index = System.Array.IndexOf(Layers, CurrentLayer);
-                if(index != 2)
-                {
-                    CurrentLayer = Layers[index + 1];
-                }
-                print(CurrentLayer);
+                player.velocity = new Vector2(direction * speed, player.velocity.y);//se aplica una velocidad a la dirección que vaya el jugador
+                this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
             }
-            else if (direction > 0f)
+            else if (direction < 0f)
             {
-                int index = System.Array.IndexOf(Layers, CurrentLayer);
-                if (index != 0)
-                {
-                    CurrentLayer = Layers[index - 1];
-                }
-                print(CurrentLayer);
+                player.velocity = new Vector2(direction * speed, player.velocity.y);
+                this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
+            }
+            else
+            {
+                player.velocity = new Vector2(0, player.velocity.y);//para que no haya deslizamiento
             }
 
-            this.gameObject.GetComponent<SpriteRenderer>().sortingLayerName = CurrentLayer;
+            direction = Input.GetAxis("Vertical");
 
-            manager.ActiveLayers(CurrentLayer);
-        }
+            if (Input.GetButtonDown("Vertical"))
+            {
+                if (direction < 0f)
+                {
+                    int index = System.Array.IndexOf(Layers, CurrentLayer);
+                    if (index != 2)
+                    {
+                        CurrentLayer = Layers[index + 1];
+                    }
+                    print(CurrentLayer);
+                }
+                else if (direction > 0f)
+                {
+                    int index = System.Array.IndexOf(Layers, CurrentLayer);
+                    if (index != 0)
+                    {
+                        CurrentLayer = Layers[index - 1];
+                    }
+                    print(CurrentLayer);
+                }
 
-        if (Input.GetButtonDown("Jump") && IsGrounded())
-        {
-            player.velocity = new Vector2(player.velocity.x, jumpSpeed);
-        }
+                this.gameObject.GetComponent<SpriteRenderer>().sortingLayerName = CurrentLayer;
+
+                manager.ActiveLayers(CurrentLayer);
+            }
+
+            if (Input.GetButtonDown("Jump") && IsGrounded())
+            {
+                player.velocity = new Vector2(player.velocity.x, jumpSpeed);
+            }
+        }     
     }
 
     private bool IsGrounded()

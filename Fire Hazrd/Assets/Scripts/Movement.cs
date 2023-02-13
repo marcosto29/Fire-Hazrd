@@ -10,8 +10,6 @@ public class Movement : MonoBehaviour
 
     [SerializeField] private float limit;
 
-    [SerializeField] private bool Rigth;
-
     private Rigidbody2D rb;
 
     private void Start()
@@ -26,7 +24,7 @@ public class Movement : MonoBehaviour
 
         distance += 1;
 
-        if (distance >= limit)//cuando alcance esta distan
+        if (distance >= limit)//cuando alcance esta distancia se gira
         {
             distance = 0;
             Turn();

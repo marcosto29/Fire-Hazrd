@@ -20,10 +20,6 @@ public abstract class Character : MonoBehaviour
         
     }
     public abstract void Damage();
-    public void Bouncy(Vector2 HitPoint)
-    {
-        rg2d.velocity = new Vector2(-bounciness.x * HitPoint.x, bounciness.y);
-    }
 
     public void sound(string name)
     {
