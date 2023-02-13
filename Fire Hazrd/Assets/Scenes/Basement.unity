@@ -284,8 +284,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 840712615}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.96, y: -4.49, z: 0}
-  m_LocalScale: {x: 0.2874911, y: 0.29383776, z: 1}
+  m_LocalPosition: {x: -7.6, y: -5.01, z: 0}
+  m_LocalScale: {x: 0.2874911, y: 0.2908751, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -301,6 +301,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1213656889}
   - component: {fileID: 1213656888}
+  - component: {fileID: 1213656890}
   m_Layer: 0
   m_Name: FireBasement
   m_TagString: Untagged
@@ -368,13 +369,33 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1213656887}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.9087, y: -1.4648, z: 0}
+  m_LocalPosition: {x: -2.9087, y: -2.96, z: 0}
   m_LocalScale: {x: 0.423632, y: 0.39830014, z: 0.39830014}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1213656890
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213656887}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 67c67ee443cac96498cd251171f79d4c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1484714343
 GameObject:
   m_ObjectHideFlags: 0
