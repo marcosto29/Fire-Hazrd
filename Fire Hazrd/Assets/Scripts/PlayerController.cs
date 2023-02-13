@@ -30,22 +30,29 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        animate.ResetTrigger("Jump");
+        animate.ResetTrigger("Attack");
         if (move)
         {
             direction = Input.GetAxis("Horizontal");
 
             if (direction > 0f)
             {
+                animate.SetBool("Walk", true);
                 player.velocity = new Vector2(direction * speed, player.velocity.y);//se aplica una velocidad a la dirección que vaya el jugador
                 this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
             }
             else if (direction < 0f)
             {
+                animate.SetBool("Walk", true);
                 player.velocity = new Vector2(direction * speed, player.velocity.y);
                 this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
             }
             else
             {
+                animate.SetBool("Walk", false);
+                animate.SetBool("Front", false);
+                animate.SetBool("Back", false);
                 player.velocity = new Vector2(0, player.velocity.y);//para que no haya deslizamiento
             }
 
@@ -55,6 +62,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (direction < 0f)
                 {
+                    animate.SetBool("Front", true);
                     int index = System.Array.IndexOf(Layers, CurrentLayer);
                     if (index != 2)
                     {
@@ -64,6 +72,7 @@ public class PlayerController : MonoBehaviour
                 }
                 else if (direction > 0f)
                 {
+                    animate.SetBool("Back", true);
                     int index = System.Array.IndexOf(Layers, CurrentLayer);
                     if (index != 0)
                     {
@@ -80,6 +89,11 @@ public class PlayerController : MonoBehaviour
             if (Input.GetButtonDown("Jump") && IsGrounded())
             {
                 player.velocity = new Vector2(player.velocity.x, jumpSpeed);
+                animate.SetTrigger("Jump");
+            }
+            if (Input.GetButtonDown("Fire1"))
+            {
+                animate.SetTrigger("Attack");
             }
         }     
     }
