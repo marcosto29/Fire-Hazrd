@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private LayerMask layer;
 
-    public ManagerGame manager;
+    public ManagerGameRoom manager;
 
     public Animator animate;
 
