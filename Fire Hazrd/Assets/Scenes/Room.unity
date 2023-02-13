@@ -3378,6 +3378,7 @@ MonoBehaviour:
   bounciness: {x: 5, y: 5}
   Health: 6
   rg2d: {fileID: 1751411375}
+  audio: {fileID: 1899903268}
   Hearts:
   - {fileID: 21300000, guid: 1569df47bc1a6954c8b53ae35df23c62, type: 3}
   - {fileID: 21300000, guid: 6d066cb12fe9a184e9a8f1c3cde59861, type: 3}
@@ -3419,7 +3420,7 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.34, y: 0.5}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2.3, y: 3.2}
     newSize: {x: 11.01, y: 13.3}
     adaptiveTilingThreshold: 0.5
@@ -3664,6 +3665,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1805310687}
   m_CullTransparentMesh: 1
+--- !u!114 &1899903268 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8207529561156405180, guid: 581f49e58fd69bf41af8fce9a6e0b23e, type: 3}
+  m_PrefabInstance: {fileID: 2067616154}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08a8f331164b2ff4d9f1c65bb097f40c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2010982614
 GameObject:
   m_ObjectHideFlags: 0
@@ -3795,6 +3807,7 @@ MonoBehaviour:
   bounciness: {x: 10, y: 10}
   Health: 0
   rg2d: {fileID: 2010982619}
+  audio: {fileID: 0}
 --- !u!50 &2010982619
 Rigidbody2D:
   serializedVersion: 4
