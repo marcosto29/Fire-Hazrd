@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
 
     public ManagerGame manager;
 
+    public Animator animate;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,15 +28,20 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        animate.SetTrigger("Stop");
         direction = Input.GetAxis("Horizontal");
 
         if (direction > 0f)
         {
             player.velocity = new Vector2(direction * speed, player.velocity.y);//se aplica una velocidad a la dirección que vaya el jugador
+            animate.SetTrigger("Walk");
+            this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
         }
         else if (direction < 0f)
         {
             player.velocity = new Vector2(direction * speed, player.velocity.y);
+            animate.SetTrigger("Walk");
+            this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
         }
         else
         {
@@ -53,6 +60,7 @@ public class PlayerController : MonoBehaviour
                     CurrentLayer = Layers[index + 1];
                 }
                 print(CurrentLayer);
+                animate.SetTrigger("WalkF");
             }
             else if (direction > 0f)
             {
@@ -62,6 +70,7 @@ public class PlayerController : MonoBehaviour
                     CurrentLayer = Layers[index - 1];
                 }
                 print(CurrentLayer);
+                animate.SetTrigger("WalkB");
             }
 
             this.gameObject.GetComponent<SpriteRenderer>().sortingLayerName = CurrentLayer;
@@ -72,6 +81,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             player.velocity = new Vector2(player.velocity.x, jumpSpeed);
+            animate.SetTrigger("Jump");
         }
     }
 
