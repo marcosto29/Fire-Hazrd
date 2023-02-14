@@ -19,6 +19,7 @@ public class ManagerGameRoom : Manager
     void Update()
     {
         bool win = true;
+       
         foreach (Transform e in this.transform)
         {
             if (e.GetComponent<Enemies>())
@@ -36,5 +37,6 @@ public class ManagerGameRoom : Manager
             key.SetActive(true);
             key.GetComponent<Animator>().SetTrigger("Sparkle");
         }
+   
     }
 }

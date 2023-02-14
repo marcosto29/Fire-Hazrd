@@ -1276,6 +1276,7 @@ MonoBehaviour:
   - {fileID: 771714866}
   - {fileID: 82564864}
   fire: {fileID: 1626237077}
+  loose: 0
   key: {fileID: 1082618432}
 --- !u!4 &422421265
 Transform:
@@ -3380,9 +3381,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounciness: {x: 5, y: 5}
-  Health: 6
+  Health: 0
   rg2d: {fileID: 1096590895}
   audio: {fileID: 528808593}
+  scenemanager: {fileID: 496019475}
   Hearts:
   - {fileID: 21300000, guid: 1569df47bc1a6954c8b53ae35df23c62, type: 3}
   - {fileID: 21300000, guid: 6d066cb12fe9a184e9a8f1c3cde59861, type: 3}
