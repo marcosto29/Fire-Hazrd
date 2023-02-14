@@ -9,19 +9,21 @@ public class PlayerController : MonoBehaviour
     public float direction = 0f;
     private Rigidbody2D player;
     public bool move;
+    public BoxCollider2D fire;
 
     string[] Layers = { "Back", "Medium", "Front" };
     string CurrentLayer;
 
     [SerializeField] private LayerMask layer;
 
-    public ManagerGameRoom manager;
+    public Manager manager;
 
     public Animator animate;
 
     // Start is called before the first frame update
     void Start()
     {
+        fire.enabled = false;
         move = true;
         CurrentLayer = this.gameObject.GetComponent<SpriteRenderer>().sortingLayerName;
         player = GetComponent<Rigidbody2D>();
@@ -93,6 +95,7 @@ public class PlayerController : MonoBehaviour
             }
             if (Input.GetButtonDown("Fire1"))
             {
+                fire.enabled = true;
                 animate.SetTrigger("Attack");
             }
         }     
@@ -103,4 +106,10 @@ public class PlayerController : MonoBehaviour
         Collider2D b = this.GetComponent<Collider2D>();
         return Physics2D.BoxCast(b.bounds.center, b.bounds.size, 0f, Vector2.down, .1f, layer);
     }
+
+    private void Fire()
+    {
+        fire.enabled = false;
+    }
+
 }
