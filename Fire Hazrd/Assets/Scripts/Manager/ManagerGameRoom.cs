@@ -32,7 +32,7 @@ public class ManagerGameRoom : Manager
         }
         if (win == true)
         {
-            print("h");
+            //print("h");
             key.SetActive(true);
         }
         /*  
