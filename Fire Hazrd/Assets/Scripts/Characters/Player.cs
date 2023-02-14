@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Player : Character
 {
+    public Scenes scenemanager;
     public Sprite[] Hearts;
     public Image HealthUI;
     // Start is called before the first frame update
@@ -25,7 +26,7 @@ public class Player : Character
         switch (Health)
         {
             case 0:
-                //Cargar la escena de derrota o reiniciar el nivel
+                scenemanager.playScene("Hall");
                 break;
             case 1:
                 HealthUI.sprite = Hearts[0];

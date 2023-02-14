@@ -8,16 +8,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: e71bf282c580d35429035b2831087911
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Basement.unity
     guid: 4e3e85141d19c8f4e92f5401c8b5d050
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: ea076393dcf8b1a459ab05a6819c199a
+  - enabled: 1
+    path: Assets/Scenes/Hall.unity
+    guid: bf30b9c191fb1284e9647f0241725a68
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 6c3c6df06cc73384289a9df9f1e21749
+  - enabled: 1
+    path: Assets/Scenes/Room.unity
+    guid: 74e63c1eb1e9cff4bbd317b29942c1c9
   m_configObjects: {}
