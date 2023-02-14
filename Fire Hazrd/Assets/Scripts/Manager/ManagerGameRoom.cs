@@ -9,6 +9,10 @@ public class ManagerGameRoom : Manager
     void Start()
     {
         key.SetActive(false);
+        if (Global.flags[1] == true)
+        {
+            fire.GetComponent<Animator>().SetTrigger("Burn");
+        }
     }
 
     // Update is called once per frame

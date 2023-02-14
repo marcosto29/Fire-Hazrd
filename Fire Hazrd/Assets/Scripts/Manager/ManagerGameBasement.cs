@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class ManagerGameBasement : Manager
 {
-    
-    // Start is called before the first frame update
-    
-
-    // Update is called once per frame
+    private void Start()
+    {
+        if(Global.flags[2] == true)
+        {
+            print("SI");
+            fire.GetComponent<Animator>().SetTrigger("Burn");
+        }
+    }
     void Update()
     {
 

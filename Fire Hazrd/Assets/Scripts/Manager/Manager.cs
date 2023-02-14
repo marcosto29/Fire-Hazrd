@@ -7,6 +7,7 @@ public abstract class Manager : MonoBehaviour
     string ActiveLayer;
     public Player MainCharacter;
     public GameObject[] Layers;
+    public GameObject fire;
     // Start is called before the first frame update
     void Start()
     {

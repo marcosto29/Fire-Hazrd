@@ -24,6 +24,7 @@ public class Object : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.I))
             {
                 GameObject.Find("LevelLoader").GetComponent<Scenes>().playScene(Scene);
+                Global.Unlock(this.gameObject.name);
             }
         }
     }
