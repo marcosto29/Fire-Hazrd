@@ -572,6 +572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d84e83c8bd973f429b0b0ac2ad2f561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Audio: {fileID: 540208296}
   launchForce: 10
 --- !u!1 &312710310
 GameObject:
@@ -1314,6 +1315,7 @@ MonoBehaviour:
   Health: 6
   rg2d: {fileID: 642083097}
   audio: {fileID: 540208296}
+  scenemanager: {fileID: 0}
   Hearts:
   - {fileID: 21300000, guid: 1569df47bc1a6954c8b53ae35df23c62, type: 3}
   - {fileID: 21300000, guid: 6d066cb12fe9a184e9a8f1c3cde59861, type: 3}
@@ -3176,6 +3178,7 @@ MonoBehaviour:
   - {fileID: 1983548497}
   - {fileID: 248746038}
   fire: {fileID: 1213656887}
+  loose: 0
 --- !u!4 &1908504648
 Transform:
   m_ObjectHideFlags: 0

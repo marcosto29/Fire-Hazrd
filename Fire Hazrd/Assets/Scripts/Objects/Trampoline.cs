@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Trampoline : MonoBehaviour
 {
+    public AudioManager Audio;
     public float launchForce;
     //public GameObject player;
     public void OnTriggerEnter2D(Collider2D collision)
     {
         collision.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.up * launchForce;
+        Audio.Play("Boing");
     }
     private void Update()
     {

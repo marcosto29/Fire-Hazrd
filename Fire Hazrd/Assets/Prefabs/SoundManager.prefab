@@ -47,31 +47,25 @@ MonoBehaviour:
   sounds:
   - name: Theme
     clip: {fileID: 8300000, guid: 146586fd88ccd6d4687655ee080b5253, type: 3}
-    volume: 0.4
+    volume: 0.3
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Paper
     clip: {fileID: 8300000, guid: adc329041691b904e815a77ee95132ab, type: 3}
-    volume: 0.3
+    volume: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Jump
     clip: {fileID: 8300000, guid: 856880ec8c26fcd4e84ec07661861939, type: 3}
-    volume: 0.8
+    volume: 0.7
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Attack
     clip: {fileID: 8300000, guid: dcc327ca399db6d408c27874f3cb6905, type: 3}
-    volume: 0.8
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Boing
-    clip: {fileID: 8300000, guid: f04116474e32e994eacfbe354d2a6ef2, type: 3}
-    volume: 0.8
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -83,13 +77,37 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Walk
     clip: {fileID: 8300000, guid: adcbc5827b6d8524ea35b752d6312c48, type: 3}
-    volume: 0.8
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Hit
     clip: {fileID: 8300000, guid: 684bf7458626a134a91922a986486c13, type: 3}
-    volume: 0.8
+    volume: 0.5
     pitch: 1
     loop: 0
+    source: {fileID: 0}
+  - name: Bug
+    clip: {fileID: 8300000, guid: 684bf7458626a134a91922a986486c13, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Book
+    clip: {fileID: 8300000, guid: 087973cd8f4d9c9438ef75ee44fec35a, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Mouse
+    clip: {fileID: 8300000, guid: c5a2c6330e90f4344ac55cd2e9e7a134, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Teddy
+    clip: {fileID: 8300000, guid: f003bd4f807786041afe4a6e1eb05f34, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
     source: {fileID: 0}

@@ -976,6 +976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d84e83c8bd973f429b0b0ac2ad2f561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Audio: {fileID: 0}
   launchForce: 20
 --- !u!68 &285139497
 EdgeCollider2D:
@@ -1831,7 +1832,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d84e83c8bd973f429b0b0ac2ad2f561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launchForce: 20
+  Audio: {fileID: 528808593}
+  launchForce: 10
 --- !u!1 &769737907
 GameObject:
   m_ObjectHideFlags: 0
@@ -3600,6 +3602,7 @@ MonoBehaviour:
   Health: 3
   rg2d: {fileID: 1285484198}
   audio: {fileID: 528808593}
+  sound: Book
 --- !u!212 &1285484202
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3787,6 +3790,7 @@ MonoBehaviour:
   Health: 3
   rg2d: {fileID: 1364671687}
   audio: {fileID: 528808593}
+  sound: Book
 --- !u!212 &1364671691
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5385,6 +5389,7 @@ MonoBehaviour:
   Health: 3
   rg2d: {fileID: 1898631855}
   audio: {fileID: 528808593}
+  sound: Teddy
 --- !u!50 &1898631855
 Rigidbody2D:
   serializedVersion: 4
