@@ -14,9 +14,6 @@ public class ManagerGameRoom : Manager
     // Update is called once per frame
     void Update()
     {
-
-        //key = GameObject.Find("key");
-
         bool win = true;
         foreach (Transform e in this.transform)
         {
@@ -32,22 +29,8 @@ public class ManagerGameRoom : Manager
         }
         if (win == true)
         {
-            //print("h");
             key.SetActive(true);
+            key.GetComponent<Animator>().SetTrigger("Sparkle");
         }
-        /*  
-
-                }
-
-                if (win == true)
-                {
-                  key.SetActive(true);
-
-                }
-                //cuando no hay enemigos lo detecta y aparece la llave
-        */
-
-
-
     }
 }

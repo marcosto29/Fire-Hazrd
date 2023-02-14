@@ -23,7 +23,6 @@ public class Object : MonoBehaviour
         if (InteractKey.gameObject.activeInHierarchy){
             if (Input.GetKeyDown(KeyCode.I))
             {
-                print("aaaaaa");
                 GameObject.Find("LevelLoader").GetComponent<Scenes>().playScene(Scene);
             }
         }
