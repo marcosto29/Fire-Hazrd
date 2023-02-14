@@ -64,21 +64,25 @@ public class PlayerController : MonoBehaviour
                 {
                     animate.SetBool("Front", true);
                     int index = System.Array.IndexOf(Layers, CurrentLayer);
+                    
                     if (index != 2)
                     {
+                        this.gameObject.transform.localScale *= new Vector2(1.2f, 1.2f);
                         CurrentLayer = Layers[index + 1];
                     }
                     print(CurrentLayer);
                 }
                 else if (direction > 0f)
                 {
-                    animate.SetBool("Back", true);
+
                     int index = System.Array.IndexOf(Layers, CurrentLayer);
+                    animate.SetBool("Back", true);
                     if (index != 0)
                     {
+                        this.gameObject.transform.localScale *= new Vector2(10/12f, 10/12f);
                         CurrentLayer = Layers[index - 1];
+
                     }
-                    print(CurrentLayer);
                 }
 
                 this.gameObject.GetComponent<SpriteRenderer>().sortingLayerName = CurrentLayer;
@@ -97,6 +101,7 @@ public class PlayerController : MonoBehaviour
             }
         }     
     }
+    
 
     private bool IsGrounded()
     {
