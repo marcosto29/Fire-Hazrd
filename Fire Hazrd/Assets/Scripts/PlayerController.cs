@@ -42,13 +42,13 @@ public class PlayerController : MonoBehaviour
             {
                 animate.SetBool("Walk", true);
                 player.velocity = new Vector2(direction * speed, player.velocity.y);//se aplica una velocidad a la dirección que vaya el jugador
-                this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
+                transform.rotation = new Quaternion(0, 0, 0, 0);
             }
             else if (direction < 0f)
             {
                 animate.SetBool("Walk", true);
                 player.velocity = new Vector2(direction * speed, player.velocity.y);
-                this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
+                transform.rotation = new Quaternion(0, 180, 0, 0);
             }
             else
             {
@@ -95,7 +95,6 @@ public class PlayerController : MonoBehaviour
             }
             if (Input.GetButtonDown("Fire1"))
             {
-                fire.enabled = true;
                 animate.SetTrigger("Attack");
             }
         }     
@@ -107,9 +106,13 @@ public class PlayerController : MonoBehaviour
         return Physics2D.BoxCast(b.bounds.center, b.bounds.size, 0f, Vector2.down, .1f, layer);
     }
 
-    private void Fire()
+    private void FireOut()
     {
         fire.enabled = false;
     }
 
+    private void FireIn()
+    {
+        fire.enabled = true;
+    }
 }
