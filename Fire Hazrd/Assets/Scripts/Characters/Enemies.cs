@@ -21,13 +21,14 @@ public class Enemies : Character
 
     public override void Damage()
     {
-        audio.Play(sound);
-        Health -= 1;
         if (this.GetComponent<Movement>())
         {
             this.GetComponent<Movement>().speed = 0f;
         }
+        this.GetComponent<Collider2D>().enabled = false;
         if (Health <= 0) this.gameObject.GetComponent<Animator>().SetTrigger("Dead");
+        audio.Play(sound);
+        Health -= 1;      
     }
 
     public void Disappear()
