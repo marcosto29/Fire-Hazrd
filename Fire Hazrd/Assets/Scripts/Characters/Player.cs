@@ -26,7 +26,7 @@ public class Player : Character
         switch (Health)
         {
             case 0:
-                scenemanager.playScene("Hall");
+                scenemanager.playScene("Defeat");
                 break;
             case 1:
                 HealthUI.sprite = Hearts[0];

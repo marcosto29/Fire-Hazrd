@@ -11,6 +11,8 @@ public class ManagerGameBasement : Manager
             print("SI");
             fire.GetComponent<Animator>().SetTrigger("Burn");
         }
+        ActiveLayer = MainCharacter.gameObject.GetComponent<SpriteRenderer>().sortingLayerName;
+        ActiveLayers(ActiveLayer);
     }
     void Update()
     {
