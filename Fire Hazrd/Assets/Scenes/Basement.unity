@@ -815,6 +815,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractKey: {fileID: 668612380}
   Scene: Room
+--- !u!1 &429341130 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3990428359787506229, guid: fdeb38346dbd0f442b12c6a4a97486d8, type: 3}
+  m_PrefabInstance: {fileID: 2075918573}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519876210
 GameObject:
   m_ObjectHideFlags: 0
@@ -1528,6 +1533,10 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: 7719557822754483048, guid: 737f371d04f7dfa43aa8acd064909877, type: 2}
     value: {fileID: 1500664196}
+  - key: {fileID: 5694833429690472289, guid: 737f371d04f7dfa43aa8acd064909877, type: 2}
+    value: {fileID: 2075918575}
+  - key: {fileID: -8741537700974876508, guid: 737f371d04f7dfa43aa8acd064909877, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &736944732
@@ -2584,6 +2593,7 @@ GameObject:
   - component: {fileID: 1484714346}
   - component: {fileID: 1484714345}
   - component: {fileID: 1484714344}
+  - component: {fileID: 1484714347}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2657,6 +2667,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1484714347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484714343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6702ef291aee3114185df0e13fc889f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  director:
+  - {fileID: 736944731}
+  - {fileID: 361813976}
 --- !u!1 &1500664195
 GameObject:
   m_ObjectHideFlags: 0
@@ -3743,12 +3768,42 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7517387979687460727, guid: fdeb38346dbd0f442b12c6a4a97486d8, type: 3}
   m_PrefabInstance: {fileID: 2075918573}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 429341130}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05198c89663e3904390e2bf9a1295926, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2075918575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429341130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 3bc257c112e7ed04b8f6cbcfab4b0ed7, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2075918574}
+          m_TargetAssemblyTypeName: Scenes, Assembly-CSharp
+          m_MethodName: playScene
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Room
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2136323823
 GameObject:
   m_ObjectHideFlags: 0
