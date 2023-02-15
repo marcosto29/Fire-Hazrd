@@ -6,14 +6,6 @@ public class Enemies : Character
 {
     public string sound;
 
-    private void Awake()
-    {
-        audio.Play(sound);
-    }
-    private void OnDestroy()
-    {
-        audio.Pause(sound);
-    }
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.GetComponent<Player>())
@@ -27,6 +19,7 @@ public class Enemies : Character
 
     public override void Damage()
     {
+        audio.Play(sound);
         Health -= 1;
         if (Health <= 0) this.gameObject.SetActive(false);
     }
