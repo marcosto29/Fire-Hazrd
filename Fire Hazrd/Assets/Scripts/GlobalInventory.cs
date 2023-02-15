@@ -7,7 +7,7 @@ public class GlobalInventory : MonoBehaviour
     public static bool start = true;
     public static bool[] animationflags = { false, false, false, false };
     public static bool[] flags = { false, false, false, false };
-    public static string[] names = { "Key", "BasementPart", "RoomPart", "Cat" };
+    public static string[] names = { "Key", "BasementPart", "RoomPart", "cat" };
 
     public static void Unlock(string name)
     {
