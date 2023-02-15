@@ -11,7 +11,7 @@ public class GameOver : MonoBehaviour
         GlobalInventory.animationflags[1] = false;
         GlobalInventory.animationflags[2] = false;
         GlobalInventory.animationflags[3] = false;
-        GlobalInventory.start = true;
+        GlobalInventory.start = false;
     }
 
     // Update is called once per frame
