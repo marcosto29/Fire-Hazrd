@@ -8,6 +8,7 @@ public class Player : Character
     public Scenes scenemanager;
     public Sprite[] Hearts;
     public Image HealthUI;
+    public bool block;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,26 +18,28 @@ public class Player : Character
     // Update is called once per frame
     void Update()
     {
-
     }
 
     public override void Damage()
     {
-        Health -= 1;
-        switch (Health)
+        if (block != true)
         {
-            case 0:
-                scenemanager.playScene("Defeat");
-                break;
-            case 1:
-                HealthUI.sprite = Hearts[0];
-                break;
-            case 2:
-                HealthUI.sprite = Hearts[1];
-                break;
-            case 3:
-                HealthUI.sprite = Hearts[2];
-                break;
+            Health -= 1;
+            switch (Health)
+            {
+                case 0:
+                    scenemanager.playScene("Defeat");
+                    break;
+                case 1:
+                    HealthUI.sprite = Hearts[0];
+                    break;
+                case 2:
+                    HealthUI.sprite = Hearts[1];
+                    break;
+                case 3:
+                    HealthUI.sprite = Hearts[2];
+                    break;
+            }
         }
     }
 
@@ -48,9 +51,13 @@ public class Player : Character
 
     IEnumerator Stop()
     {
+
         this.gameObject.GetComponent<PlayerController>().move = false;
         yield return new WaitForSeconds(1);
+
         this.gameObject.GetComponent<PlayerController>().move = true;
+        yield return new WaitForSeconds(3);
+        block = false;
     }
 
 }

@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public bool move;
     public BoxCollider2D fire;
 
-    string[] Layers = { "Back", "Medium", "Front" };
+    string[] Layers = { "huevodcho","Back", "Medium", "Front","huevoizq" };
     string CurrentLayer;
 
     [SerializeField] private LayerMask layer;
@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
                     animate.SetBool("Front", true);
                     int index = System.Array.IndexOf(Layers, CurrentLayer);
                     
-                    if (index != 2)
+                    if (index != 4)
                     {
                         this.gameObject.transform.localScale *= new Vector2(1.2f, 1.2f);
                         CurrentLayer = Layers[index + 1];

@@ -41,6 +41,9 @@ TagManager:
   - name: Background
     uniqueID: 3094326839
     locked: 0
+  - name: huevodcho
+    uniqueID: 2695295317
+    locked: 0
   - name: Back
     uniqueID: 2752333733
     locked: 0
@@ -49,6 +52,9 @@ TagManager:
     locked: 0
   - name: Front
     uniqueID: 2266674975
+    locked: 0
+  - name: huevoizq
+    uniqueID: 1227800591
     locked: 0
   - name: Default
     uniqueID: 0
