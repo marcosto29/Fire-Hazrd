@@ -5,9 +5,12 @@ using UnityEngine;
 public class ManagerGameRoom : Manager
 {
     public GameObject key;
+    bool win;
+    public Enemies[] enemies;
     // Start is called before the first frame update
     void Start()
     {
+        win = false;
         key.SetActive(false);
         if (Global.flags[1] == true)
         {
@@ -20,24 +23,15 @@ public class ManagerGameRoom : Manager
     // Update is called once per frame
     void Update()
     {
-        bool win = true;
-       
-        foreach (Transform e in this.transform)
+        foreach (Enemies e in enemies)
         {
-            if (e.GetComponent<Enemies>())
-            {
-
-                if (e.gameObject.GetComponent<Enemies>().Health <= 0)
-                    e.gameObject.SetActive(false);
-
-                else win = false;
-
-            }
+            if (e.isActiveAndEnabled) break;
+            else win = true;
         }
         if (win == true)
         {
             key.SetActive(true);
-            key.GetComponent<Animator>().SetTrigger("Sparkle");
+            key.GetComponent<Animator>().SetTrigger("sparkle");
         }
    
     }

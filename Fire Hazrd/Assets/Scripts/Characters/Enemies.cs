@@ -28,5 +28,6 @@ public class Enemies : Character
     public override void Damage()
     {
         Health -= 1;
+        if (Health <= 0) this.gameObject.SetActive(false);
     }
 }

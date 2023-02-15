@@ -11,7 +11,7 @@ public class Player : Character
     // Start is called before the first frame update
     void Start()
     {
-        Health = 3;
+        Health = 30;
     }
 
     // Update is called once per frame
