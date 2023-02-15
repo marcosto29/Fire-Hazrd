@@ -91,23 +91,23 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 684bf7458626a134a91922a986486c13, type: 3}
     volume: 0.5
     pitch: 1
-    loop: 1
+    loop: 0
     source: {fileID: 0}
   - name: Book
     clip: {fileID: 8300000, guid: 087973cd8f4d9c9438ef75ee44fec35a, type: 3}
     volume: 0.5
     pitch: 1
-    loop: 1
+    loop: 0
     source: {fileID: 0}
   - name: Mouse
     clip: {fileID: 8300000, guid: c5a2c6330e90f4344ac55cd2e9e7a134, type: 3}
     volume: 0.5
     pitch: 1
-    loop: 1
+    loop: 0
     source: {fileID: 0}
   - name: Teddy
     clip: {fileID: 8300000, guid: f003bd4f807786041afe4a6e1eb05f34, type: 3}
     volume: 0.5
     pitch: 1
-    loop: 1
+    loop: 0
     source: {fileID: 0}
