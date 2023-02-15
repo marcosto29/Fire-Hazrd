@@ -11,6 +11,10 @@ public class Start : MonoBehaviour
         GlobalInventory.animationflags[1] = false;
         GlobalInventory.animationflags[2] = false;
         GlobalInventory.animationflags[3] = false;
+        GlobalInventory.flags[0] = false;
+        GlobalInventory.flags[1] = false;
+        GlobalInventory.flags[2] = false;
+        GlobalInventory.flags[3] = false;
         GlobalInventory.start = true;
     }
 
