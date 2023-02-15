@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    [SerializeField] private float speed;
+    public float speed;
 
     [SerializeField] private float distance;
 

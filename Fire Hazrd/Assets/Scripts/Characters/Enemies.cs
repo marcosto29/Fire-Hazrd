@@ -23,6 +23,15 @@ public class Enemies : Character
     {
         audio.Play(sound);
         Health -= 1;
-        if (Health <= 0) this.gameObject.SetActive(false);
+        if (this.GetComponent<Movement>())
+        {
+            this.GetComponent<Movement>().speed = 0f;
+        }
+        if (Health <= 0) this.gameObject.GetComponent<Animator>().SetTrigger("Dead");
+    }
+
+    public void Disappear()
+    {
+        this.gameObject.SetActive(false);
     }
 }
