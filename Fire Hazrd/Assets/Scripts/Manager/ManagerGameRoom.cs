@@ -9,16 +9,16 @@ public class ManagerGameRoom : Manager
     public Enemies[] enemies;
     int Point;
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         win = false;
         key.SetActive(false);
 
-        if (Global.flags[1] == true)
+        if (GlobalInventory.flags[1] == true)
         {
             fire.GetComponent<Animator>().SetTrigger("Burn");
         }
-        
+
         ActiveLayer = MainCharacter.gameObject.GetComponent<SpriteRenderer>().sortingLayerName;
         ActiveLayers(ActiveLayer);
     }
@@ -30,7 +30,7 @@ public class ManagerGameRoom : Manager
         {
             if (e.isActiveAndEnabled == false) Point++;
         }
-        if (Point == enemies.Length) key.SetActive(true);
+        if (Point == enemies.Length && GlobalInventory.flags[1] == false) key.SetActive(true);
         else Point = 0;
     }
 }

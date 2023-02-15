@@ -15,13 +15,13 @@ public class HallTimeline : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Global.start)
+        if (GlobalInventory.start)
         {
             director[0].Play();
-            Global.start = false;
+            GlobalInventory.start = false;
         }
             
-        if(Global.end)
+        if(GlobalInventory.end)
             director[1].Play();
     }
 }

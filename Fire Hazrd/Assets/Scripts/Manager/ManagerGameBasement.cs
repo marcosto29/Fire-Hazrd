@@ -6,9 +6,8 @@ public class ManagerGameBasement : Manager
 {
     private void Start()
     {
-        if(Global.flags[2] == true)
+        if (GlobalInventory.flags[2] == true)
         {
-            print("SI");
             fire.GetComponent<Animator>().SetTrigger("Burn");
         }
         ActiveLayer = MainCharacter.gameObject.GetComponent<SpriteRenderer>().sortingLayerName;
