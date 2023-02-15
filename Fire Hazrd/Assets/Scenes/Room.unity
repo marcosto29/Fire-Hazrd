@@ -2673,7 +2673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f240ee47ef7bce44851beb2d6b8ae8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractKey: {fileID: 1082618432}
+  InteractKey: {fileID: 769737907}
   Scene: Basement
 --- !u!61 &1082618436
 BoxCollider2D:

@@ -794,6 +794,7 @@ GameObject:
   m_Component:
   - component: {fileID: 363219452}
   - component: {fileID: 363219451}
+  - component: {fileID: 363219454}
   - component: {fileID: 363219453}
   m_Layer: 0
   m_Name: BasementPart
@@ -840,9 +841,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1542633563
+  m_SortingLayer: -3
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f34f2c0cb0c4d9c4ab83d749d7bb98f8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -882,8 +883,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f240ee47ef7bce44851beb2d6b8ae8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractKey: {fileID: 363219450}
+  InteractKey: {fileID: 668612380}
   Scene: Room
+--- !u!61 &363219454
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363219450}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 14.48, y: 14.26}
+    newSize: {x: 14.48, y: 14.26}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 14.48, y: 14.26}
+  m_EdgeRadius: 0
 --- !u!1 &392058786
 GameObject:
   m_ObjectHideFlags: 0
@@ -1494,7 +1521,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 668612380}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26.2, y: 3.8, z: 0}
+  m_LocalPosition: {x: -26.9, y: -6.6, z: 0}
   m_LocalScale: {x: 13.64559, y: 17.955235, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
