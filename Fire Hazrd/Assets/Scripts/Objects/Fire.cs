@@ -26,4 +26,8 @@ public class Fire : MonoBehaviour
             }
         }
     }
+    public void endFire()
+    {
+        this.gameObject.SetActive(false);
+    }
 }

@@ -33,4 +33,8 @@ public class ManagerGameRoom : Manager
         if (Point == enemies.Length && GlobalInventory.flags[1] == false) key.SetActive(true);
         else Point = 0;
     }
+    public void endFire()
+    {
+        fire.SetActive(false);
+    }
 }
