@@ -18,6 +18,7 @@ public class ManagerGameRoom : Manager
         {
             fire.GetComponent<Animator>().SetTrigger("Burn");
         }
+        
 
         ActiveLayer = MainCharacter.gameObject.GetComponent<SpriteRenderer>().sortingLayerName;
         ActiveLayers(ActiveLayer);
