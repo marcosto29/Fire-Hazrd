@@ -2294,7 +2294,7 @@ GameObject:
   - component: {fileID: 1213656888}
   - component: {fileID: 1213656890}
   - component: {fileID: 1213656892}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FireBasement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
