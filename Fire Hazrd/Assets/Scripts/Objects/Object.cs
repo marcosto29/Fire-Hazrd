@@ -23,18 +23,8 @@ public class Object : MonoBehaviour
         if (InteractKey.gameObject.activeInHierarchy){
             if (Input.GetKeyDown(KeyCode.I))
             {
-                if (this.gameObject.name == "Key")
-                {
-                    Global.Unlock(this.gameObject.name);
-                    GameObject.Find("LevelLoader").GetComponent<Scenes>().playScene(Scene);
-                }
-                else
-                {
-                    Global.Unlock(this.gameObject.name);
-                    print("A");
-                }
-                
-
+                Global.Unlock(this.gameObject.name);
+                GameObject.Find("LevelLoader").GetComponent<Scenes>().playScene(Scene);
             }
         }
     }

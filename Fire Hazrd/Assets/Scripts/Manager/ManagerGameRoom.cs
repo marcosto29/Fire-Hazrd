@@ -13,10 +13,12 @@ public class ManagerGameRoom : Manager
     {
         win = false;
         key.SetActive(false);
+
         if (Global.flags[1] == true)
         {
             fire.GetComponent<Animator>().SetTrigger("Burn");
         }
+        
         ActiveLayer = MainCharacter.gameObject.GetComponent<SpriteRenderer>().sortingLayerName;
         ActiveLayers(ActiveLayer);
     }
