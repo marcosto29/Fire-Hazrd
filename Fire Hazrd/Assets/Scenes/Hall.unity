@@ -223,18 +223,8 @@ PlayableDirector:
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
-  - key: {fileID: -1596404027776495735, guid: c1aea86e9a54e594ea876c581ac4f252, type: 2}
-    value: {fileID: 1898600877}
-  - key: {fileID: -2146288364677461459, guid: c1aea86e9a54e594ea876c581ac4f252, type: 2}
-    value: {fileID: 1280681264}
-  - key: {fileID: -2180767261865623163, guid: c1aea86e9a54e594ea876c581ac4f252, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: -8196730661696804226, guid: c1aea86e9a54e594ea876c581ac4f252, type: 2}
-    value: {fileID: 0}
   - key: {fileID: 0}
     value: {fileID: 0}
-  - key: {fileID: -6923136839113892312, guid: c1aea86e9a54e594ea876c581ac4f252, type: 2}
-    value: {fileID: 1829875118}
   - key: {fileID: 8351041730264457576, guid: 93cbf5fb0639ac549bc0020b6c393a14, type: 2}
     value: {fileID: 977494024}
   - key: {fileID: 7775341358182696620, guid: 93cbf5fb0639ac549bc0020b6c393a14, type: 2}
@@ -540,7 +530,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1200640457
-  m_SortingLayer: -4
+  m_SortingLayer: -5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9d5166d694833ae4faa3c660a5f3db40, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
