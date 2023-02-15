@@ -13,17 +13,17 @@ public class BasementTiemline : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GlobalInventory.flags[1])
+        if (GlobalInventory.animationflags[1])
         {
             director[0].Play();
-            GlobalInventory.flags[1] = false;
+            GlobalInventory.animationflags[1] = false;
         }
 
-        if (GlobalInventory.flags[3])
+        if (GlobalInventory.animationflags[3])
         {
             director[1].Play();
-            GlobalInventory.end = true;
-            GlobalInventory.flags[3] = false;
+            GlobalInventory.animationflags[0] = true;
+            GlobalInventory.animationflags[3] = false;
         }
 
     }

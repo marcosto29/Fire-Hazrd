@@ -5,7 +5,7 @@ using UnityEngine;
 public class GlobalInventory : MonoBehaviour
 {
     public static bool start = true;
-    public static bool end = false;
+    public static bool[] animationflags = { false, false, false, false };
     public static bool[] flags = { false, false, false, false };
     public static string[] names = { "Key", "BasementPart", "RoomPart", "Cat" };
 
@@ -13,6 +13,8 @@ public class GlobalInventory : MonoBehaviour
     {
         int i = System.Array.IndexOf(names,name);
         flags[i] = true;
+        if(i!=0)
+            animationflags[i] = true;
     }
 
 }
