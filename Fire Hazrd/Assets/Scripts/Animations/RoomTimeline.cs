@@ -11,7 +11,11 @@ public class RoomTimeline : MonoBehaviour
     void Update()
     {
         if (Global.flags[2])
+        {
             director.Play();
+            Global.flags[2] = false;
+        }
+            
                
     }
 }
