@@ -10,10 +10,10 @@ public class RoomTimeline : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Global.flags[2])
+        if (GlobalInventory.flags[2])
         {
             director.Play();
-            Global.flags[2] = false;
+            GlobalInventory.flags[2] = false;
         }
             
                
