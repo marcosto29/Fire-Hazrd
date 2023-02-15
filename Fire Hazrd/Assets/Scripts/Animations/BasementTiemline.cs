@@ -21,6 +21,7 @@ public class BasementTiemline : MonoBehaviour
         if (Global.flags[3])
         {
             director[1].Play();
+            Global.end = true;
         }
 
     }
