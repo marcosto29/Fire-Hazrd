@@ -5,7 +5,7 @@ using UnityEngine;
 
 public abstract class Manager : MonoBehaviour
 {
-    string ActiveLayer;
+    public string ActiveLayer;
     public Player MainCharacter;
     public GameObject[] Layers;
     public GameObject fire;
@@ -13,8 +13,7 @@ public abstract class Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ActiveLayer = MainCharacter.gameObject.GetComponent<SpriteRenderer>().sortingLayerName;
-        ActiveLayers(ActiveLayer);
+       
     }
 
     // Update is called once per frame
