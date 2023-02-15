@@ -21,7 +21,7 @@ public class HallTimeline : MonoBehaviour
             GlobalInventory.start = false;
         }
             
-        if(GlobalInventory.end)
+        if(GlobalInventory.animationflags[0])
             director[1].Play();
     }
 }
