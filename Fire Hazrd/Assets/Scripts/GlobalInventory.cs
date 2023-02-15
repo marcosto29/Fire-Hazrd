@@ -5,6 +5,7 @@ using UnityEngine;
 public class Global : MonoBehaviour
 {
     public static bool start = true;
+    public static bool end = false;
     public static bool[] flags = { false, false, false, false };
     public string[] names = { "Key", "BasementPart", "RoomPart", "Cat" };
 
