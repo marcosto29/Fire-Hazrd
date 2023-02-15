@@ -2703,7 +2703,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082618432}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: f7aee6eaed914254f8a882b4c9f0feb3, type: 2}
   m_CullingMode: 0
@@ -3166,7 +3166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounciness: {x: 10, y: 10}
-  Health: 3
+  Health: 0
   rg2d: {fileID: 1285484198}
   audio: {fileID: 528808593}
   sound: Book
@@ -3354,7 +3354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounciness: {x: 10, y: 10}
-  Health: 3
+  Health: 0
   rg2d: {fileID: 1364671687}
   audio: {fileID: 528808593}
   sound: Book

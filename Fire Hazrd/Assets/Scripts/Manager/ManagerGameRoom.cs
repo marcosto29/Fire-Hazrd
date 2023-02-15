@@ -7,6 +7,7 @@ public class ManagerGameRoom : Manager
     public GameObject key;
     bool win;
     public Enemies[] enemies;
+    int Point;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,14 +26,9 @@ public class ManagerGameRoom : Manager
     {
         foreach (Enemies e in enemies)
         {
-            if (e.isActiveAndEnabled) break;
-            else win = true;
+            if (e.isActiveAndEnabled == false) Point++;
         }
-        if (win == true)
-        {
-            key.SetActive(true);
-            key.GetComponent<Animator>().SetTrigger("sparkle");
-        }
-   
+        if (Point == enemies.Length) key.SetActive(true);
+        else Point = 0;
     }
 }
