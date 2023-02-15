@@ -7,11 +7,11 @@ public class Global : MonoBehaviour
     public static bool start = true;
     public static bool end = false;
     public static bool[] flags = { false, false, false, false };
-    public string[] names = { "Key", "BasementPart", "RoomPart", "Cat" };
+    public static string[] names = { "Key", "BasementPart", "RoomPart", "Cat" };
 
     public static void Unlock(string name)
     {
-        int i = name.IndexOf(name);
+        int i = System.Array.IndexOf(names,name);
         flags[i] = true;
     }
 

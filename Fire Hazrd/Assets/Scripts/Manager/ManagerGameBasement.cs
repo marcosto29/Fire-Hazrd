@@ -16,7 +16,7 @@ public class ManagerGameBasement : Manager
     }
     void Update()
     {
-
+        
     }
 
     
