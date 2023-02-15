@@ -2,26 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
-using UnityEngine.Timeline;
 
-public class HallTimeline : MonoBehaviour
+public class BasementTiemline : MonoBehaviour
 {
-    //public TimelineAsset timeline;
     public PlayableDirector[] director;
-    
+
     // Start is called before the first frame update
-    
+
 
     // Update is called once per frame
     void Update()
     {
-        if (Global.start)
+        if (Global.flags[1])
         {
             director[0].Play();
-            Global.start = false;
         }
-            
-        
-        
+
+        if (Global.flags[3])
+        {
+            director[1].Play();
+        }
+
     }
 }
