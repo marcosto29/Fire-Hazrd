@@ -3900,7 +3900,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!60 &1626237078
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5277,7 +5277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounciness: {x: 10, y: 10}
-  Health: 3
+  Health: 0
   rg2d: {fileID: 1898631855}
   audio: {fileID: 528808593}
   sound: Teddy
