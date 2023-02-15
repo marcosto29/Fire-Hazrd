@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 397046439}
   - component: {fileID: 397046438}
   m_Layer: 5
-  m_Name: Button (Legacy) (1)
+  m_Name: Controles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -330,7 +330,7 @@ GameObject:
   - component: {fileID: 707274328}
   - component: {fileID: 707274327}
   m_Layer: 5
-  m_Name: Button (Legacy) (2)
+  m_Name: "Cr\xE9ditos"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -641,7 +641,7 @@ GameObject:
   - component: {fileID: 928880781}
   - component: {fileID: 928880780}
   m_Layer: 5
-  m_Name: Text (Legacy) (1)
+  m_Name: "T\xEDtulo"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -664,7 +664,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.585}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -121.99994, y: 168}
+  m_AnchoredPosition: {x: -154.39996, y: 175.9}
   m_SizeDelta: {x: -549.36, y: -363.36}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &928880780
@@ -1086,7 +1086,7 @@ GameObject:
   - component: {fileID: 2144296240}
   - component: {fileID: 2144296239}
   m_Layer: 5
-  m_Name: Button (Legacy)
+  m_Name: Jugar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
